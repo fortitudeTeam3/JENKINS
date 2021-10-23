@@ -3,14 +3,14 @@ pipeline {
     stages {
         stage (‘Checkout’) {
             steps {
-                git branch: 'main', url: 'git@github.com:bohdankits05/devops14-jenkins-public.git'
+                git branch: 'main', url: 'git@github.com:fortitudeTeam3/JENKINS.git'
             }
         }
 
         stage (‘CreateEnv’) {
             steps {
                 script {
-                    sh "chmod +x -R ${env.WORKSPACE}/../${env.JOB_NAME}/ec2.sh"
+                    sh “chmod +x -R ${env.WORKSPACE}/../${env.JOB_NAME}/ec2.sh”
                 }
             }
         }
